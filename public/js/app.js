@@ -6,11 +6,12 @@ socket.on('connect', function(){
 
 socket.on('message', function(message){
 	console.log(message.text);
+	jQuery('.messages').append('<p>' +message.text +  '</p>')
 });
 
 //Handles message submission
 
-var $form = $("#message-form");
+var $form = jQuery("#message-form");
 
 $form.on('submit', function(event){
 
