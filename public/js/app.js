@@ -2,9 +2,14 @@ var socket = io();
 var name = getQueryVariable('name') || 'Anon';
 var room = getQueryVariable('room');
 
+jQuery('.room').append(room);
+
 socket.on('connect', function(){
 	console.log('Connected to socket.io server!');
-	console.log(name + " joined " + room);
+	socket.emit('joinRoom', {
+		name: name,
+		room: room
+	});
 });
 
 socket.on('message', function(message){
