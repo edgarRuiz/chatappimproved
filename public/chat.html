@@ -3,15 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<title>Socket.io Basics</title>
+	<link href = "./css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "./css/styles.css" rel = "stylesheet">
 </head>
 	<body>
-		<a href="index.html">Change user details</a>
-		<h1 class = "room"> <!-- room name using jquery -->  </h1>
-		<form id="message-form">
-			<input type="text" name="message"/>
-			<input type="submit">
-		</form>
-		<div class = "messages">
+
+		<div class = "container">
+			<div class = "row">
+				<div class = "col-md-6 col-md-offset-3 well ">
+					<a href="index.html">Change user details</a>
+					<h1 class = "room"> <!-- room name using jQuery -->  </h1>
+
+					<form id = "message-form">
+						<div class = "form-group">
+							<div class = "input-group">
+								<span class = "input-group-addon">
+									<span class = "glyphicon glyphicon-comment"></span>
+								</span>
+								<input type="text" name="message" class = "form-control"/>
+							</div>
+						</div>
+						<div class = "form-group">
+							<input type="submit" class = "btn btn-default btn-block">
+						</div>
+					</form>
+					<ul class = "messages list-group">
+				 	</ul>
+			</div>
+		</div>
 			
 		</div>
 		<script src = "/js/jquery-3.1.0.min.js"></script>
