@@ -18,7 +18,7 @@ socket.on('message', function(message){
 	var $message = jQuery('<li class="list-group-item"> </li>');
 	$message.append('<p><strong>' +message.name + ' ' + moment.unix(message.timestamp).format('MMM Do YYYY, h:mma')+'</strong></p>');
 	$message.append('<p>'  +message.text + '</p>');
-	$messages.append($message);
+	$messages.prepend($message);
 });
 
 //Handles message submission
